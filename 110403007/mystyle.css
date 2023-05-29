@@ -1,0 +1,24 @@
+body {
+    font-size: 20px;
+    background-color: white;
+    color: black;
+}
+
+div {
+    background-color:bisque;
+    color:cadetblue;
+}
+
+div:hover{
+    background-color:aliceblue;
+    color:blueviolet;
+}
+
+p::first-letter{
+    font-size:200%;
+}
+
+::seletion{
+    color:white;
+    background-color: green;
+}

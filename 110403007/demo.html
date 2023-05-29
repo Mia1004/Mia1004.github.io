@@ -1,0 +1,102 @@
+<!-- Author: 110403007 -->
+<!-- Define HTML5-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Define character set as UTF-8 to prevent Chinese words display garbled -->
+  <meta charset="utf-8">
+
+  <title>Exchange Calculator</title>
+
+  <link rel="stylesheet" href="mystyle.css">
+  <xml id="rate" src="rate.xml"></xml>
+
+</head>
+
+<body>
+  <!-- css will set body text to 20px (1)-->
+
+  <!-- 1. h1 -->
+  <h1 align="center">Exchange Calculator</h1>
+  <hr>
+  <div id="exchange">
+	<p>This is an exchange calculator. Please enter the amounts you want to convert.</p>
+	<div>TWD<input type ="text" id="twd"></div>
+  <hr>
+	USD:<p class="usd"></p>
+  <hr>
+	EUR:<p class="eur"></p>
+  <hr>
+	JPY:<p class="jpy"></p>
+  <hr>
+	KRW:<p class="krw"></p>
+  <hr>
+	AUD:<p class="aud"></p>
+  </div>
+
+  <!-- button -->
+  <hr>
+  <button onclick="show()">Show</button>
+  <hr>
+  <button onclick="reset()">Reset</button>
+
+
+  <script>
+    var twd, usd, eur, jpy, krw, aud;
+    function show()
+    {
+	twd = document.getElementById("twd").value;
+	usd = document.getElementById("usd").value;
+	eur = document.getElementById("eur").value;
+	jpy = document.getElementById("jpy").value;
+	krw = document.getElementById("krw").value;
+	aud = document.getElementById("aud").value;
+	if(twd>0){
+	 usd.innerHTML = usd = twd * 30;
+	 computed:{
+		usd:{
+		 get(){
+		  return this.twd * 31},
+		 set(val){
+		  this.twd =val/31}},
+		eur:{
+		 get(){
+		  return this.twd * 31},
+		 set(val){
+		  this.twd =val/31}},
+		jpy:{
+		 get(){
+		  return this.twd * 31},
+		 set(val){
+		  this.twd =val/31}},
+		krw:{
+		 get(){
+		  return this.twd * 31},
+		 set(val){
+		  this.twd =val/31}},
+		aud:{
+		 get(){
+		  return this.twd * 31},
+		 set(val){
+		  this.twd =val/31}}
+    	}}
+	else{
+	 alert('Please check the number.');
+	 reset();
+	}
+	 
+    };
+
+    function reset()
+    {
+      reset();
+    }
+  </script>
+  <noscript>
+    <p>Your browser does not support js, please check your setting</p>
+  </noscript>
+</body>
+
+</html>
